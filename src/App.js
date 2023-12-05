@@ -11,11 +11,39 @@ function App() {
 
   return (
     <div className="App">
-      <ul className='menu' style={{display:"flex", margin:"10px"}}>
-        <li style={{padding:"10px"}}> <a href="/">list</a> </li>
-        <li style={{padding:"10px"}}> <a href="/articles/2">view</a> </li>
-        <li style={{padding:"10px"}}> <a href="/articles/new">글작성</a> </li>
-      </ul>
+      <div className="hd">
+        <div className="container flex">
+            <h1 className="logo"><a href="/">Company</a></h1>
+            <div className="navWrap">
+                <ul className="nav bg-1">
+                    <li><a href="/">list</a>
+                        <div className="bar"></div>
+                        <ul className="sub">
+                            <li><a href="#">sub01_01</a></li>
+                            <li><a href="#">sub01_02</a></li>
+                            <li><a href="#">sub01_03</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="/articles/2">view</a>
+                        <div className="bar"></div>
+                        <ul className="sub">
+                            <li><a href="#">sub02_01</a></li>
+                            <li><a href="#">sub02_02</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="/articles/new">글작성</a>
+                        <div className="bar"></div>
+                        <ul className="sub">
+                            <li><a href="#">sub03_01</a></li>
+                            <li><a href="#">sub03_02</a></li>
+                            <li><a href="#">sub03_03</a></li>
+                            <li><a href="#">sub03_04</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+      </div>
       <Routes>
         <Route path='/' element={<MainListView/>} />
         <Route path='/articles/:id' element={<ViewPost/>} />

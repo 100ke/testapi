@@ -20,13 +20,27 @@ function MainListView({ }) {
 
   return (
     <>
-      {
-        listData?.map(function (item, i) {  // 리스트 데이터가 있다면 뒤에 실행.. ? 이것때문에 안됨
-          return (
-            <li key={i}><a href={`/articles/${item.id}`}>{item.title}</a></li>
-          )
-        })
-      }
+    <div className="container tableWrap">
+      <h3 style={{textAlign:"center", marginBottom:"20px"}}>게시판</h3>
+      <table>
+        <tr>
+          <th>글번호</th>
+          <th>제목</th>
+        </tr>
+          {
+            listData?.map(function (item, i) {  // 리스트 데이터가 있다면 뒤에 실행.. ? 이것때문에 안됨
+              return (
+                <>
+                <tr>
+                  <td className="num" key={i}>{item.id}</td>
+                  <td className="title" key={i}><a href={`/articles/${item.id}`}>{item.title}</a></td>
+                </tr>
+                </>
+              )
+            })
+          }
+        </table>
+    </div>
     </>
   )
 }

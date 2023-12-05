@@ -14,3 +14,26 @@ ul,li {list-style: none;}
     font-size: 0.8em;
     cursor: pointer;
 }
+
+.container {width: 1280px; margin: 0 auto;}
+.container.flex {display: flex; justify-content: space-between; align-items: center;}
+
+.hd {position: sticky; width: 100%;}
+.hd a {color: black;}
+.navWrap .sub {display: none;}
+.nav{display: flex;}
+
+.nav>li>a {display: block; padding: 5px 30px;}
+.nav>li {position: relative;}
+.nav>li .bar {position: absolute; width: 0; height: 5px; 
+    background: red; transition: 0.3s;}
+.nav>li:hover .bar {width: 100%;}
+
+
+.tableWrap {height: 500px; padding-top: 100px;}
+
+table {margin: 0 auto;}
+
+table, tr, th, td {border: 1px solid black; border-collapse: collapse;}
+td.num {width: 60px; text-align: center;}
+td.title { width: 600px; padding-left: 10px;}
